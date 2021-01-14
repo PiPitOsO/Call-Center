@@ -28,7 +28,7 @@ public class Call {
             Thread.sleep(GETTING_STARTED); // на 20м звонке стартуем
             System.out.println(Thread.currentThread().getName() + " начал работу");
             while (LBD.size() != 0) {
-                System.out.println(Thread.currentThread().getName() + " взял в работу " + LBD.remove());
+                System.out.println(Thread.currentThread().getName() + " взял в работу " + LBD.take());
                 Thread.sleep(WORK);
                 System.out.println(Thread.currentThread().getName() + " зевершил звонок");
             }
